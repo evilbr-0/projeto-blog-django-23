@@ -16,17 +16,18 @@
   "editor.fontFamily": "'Fira Code', Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
   "terminal.integrated.fontFamily": "",
   "editor.fontLigatures": false,
+
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",  // Muda para Ruff como formatter
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.fixAll.unusedImports": "explicit",
-      "source.organizeImports": "explicit"
+      "source.fixAll.ruff": "explicit",         // Corrige todos os erros Ruff pode fixar
+      "source.organizeImports.ruff": "explicit" // Organiza imports com Ruff
     }
   },
+
   "python.languageServer": "Pylance",
   "python.analysis.diagnosticSeverityOverrides": {
     "reportUnknownMemberType": "none",
@@ -37,21 +38,17 @@
   },
   "python.defaultInterpreterPath": "/usr/bin/python",
   "python.analysis.typeCheckingMode": "basic",
+
+  // Code Spell Checker
   "cSpell.enabled": true,
   "cSpell.language": "en,pt,pt_BR",
-  "cSpell.checkOnlyEnabledFileTypes": false,  // Checa em mais tipos de arquivo (opcional)
-  "cSpell.userWords": [                     // Palavras que você usa muito e não quer que sublinhe
+  "cSpell.checkOnlyEnabledFileTypes": false,
+  "cSpell.userWords": [
     "Thales", "Manaus", "evilbr0", "Pylance"
   ],
 
-  // Opcional: Ativa Ruff como linter (recomendado!)
+  // Ruff (linter + formatter + organize imports)
   "ruff.lint.enabled": true,
-  "ruff.format.enabled": true,  // Ruff também formata (pode substituir Black se quiser)
-  "editor.codeActionsOnSave": {
-    "source.fixAll.ruff": "explicit",
-    "source.organizeImports.ruff": "explicit"
-  }
+  "ruff.format.enabled": true,
+  "ruff.organizeImports": true  // Ativa organize imports via Ruff
 }
-
-// Instalar aplicações: Python Black Formatter
-// Ruff
