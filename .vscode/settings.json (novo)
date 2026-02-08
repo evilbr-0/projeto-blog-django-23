@@ -1,12 +1,12 @@
 {
-  "window.zoomLevel": 2,
-  "editor.fontSize": 18,
+  "window.zoomLevel": 1,
+  "editor.fontSize": 13,
   "editor.hover.enabled": "on",
   "workbench.startupEditor": "none",
   "explorer.compactFolders": false,
-  "terminal.integrated.fontSize": 24,
+  "terminal.integrated.fontSize": 12,
   "editor.rulers": [80, 120],
-  "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
+  "workbench.colorTheme": "Dracula Theme",
   "workbench.iconTheme": "material-icon-theme",
   "code-runner.executorMap": {
     "python": "clear ; python -u"
@@ -35,9 +35,14 @@
     "reportUnknownLambdaType": "none",
     "reportUnknownParameterType": "none"
   },
-  "python.defaultInterpreterPath": "./venv/bin/python",
+  "python.defaultInterpreterPath": "/usr/bin/python",
   "python.analysis.typeCheckingMode": "basic",
   "cSpell.enabled": true,
+  "cSpell.language": "en,pt,pt_BR",
+  "cSpell.checkOnlyEnabledFileTypes": false,  // Checa em mais tipos de arquivo (opcional)
+  "cSpell.userWords": [                     // Palavras que você usa muito e não quer que sublinhe
+    "Thales", "Manaus", "evilbr0", "Pylance"
+  ],
 
   // Opcional: Ativa Ruff como linter (recomendado!)
   "ruff.lint.enabled": true,
